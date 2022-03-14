@@ -7,11 +7,17 @@ import {Nave} from "./nave.js"
 
 var divError = document.getElementById("divError")
 
+/**
+  Evento que llama a validarFormulario si se presiona el boton "Comprobar"
+*/
 const boton = document.getElementById("iBoton");
 boton.addEventListener("click", function(evento){
 	validarFormulario()
 });
 
+/**
+  Evento que llama a "rellenarTipoPilotaje" si se cambia el Pilotaje por "Automatico" o "Personal"
+*/
 const select = document.getElementById("sPilotaje")
 select.addEventListener("change", function(evento){
 	rellenarTipoPilotaje()
