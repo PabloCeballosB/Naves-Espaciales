@@ -8,7 +8,10 @@
   @param {string} codigo Parametro que obtiene el codigo de la Nave
   @param {string} numMotores Parametro que obtiene el numero de motores de la nave
 */
-class Nave{
+
+
+
+export class Nave{
   constructor(codigo, numMotores){
     this._codigo = codigo
     this._numMotores = numMotores

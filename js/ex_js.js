@@ -3,7 +3,19 @@
   @author Pablo Ceballos Benitez
 */
 
-  var divError = document.getElementById("divError")
+import {Nave} from "./nave.js"
+
+var divError = document.getElementById("divError")
+
+const boton = document.getElementById("iBoton");
+boton.addEventListener("click", function(evento){
+	validarFormulario()
+});
+
+const select = document.getElementById("sPilotaje")
+select.addEventListener("change", function(evento){
+	rellenarTipoPilotaje()
+});
 
 /**
   Está función ordena un array de strings alfabéticamente.
@@ -46,6 +58,8 @@ function validarFormulario(){
     if(Math.sign(nave.numMotores) != 1) throw "Añade un numero positivo"
 
     divError.style.display= "none"
+    console.log("Todo correcto")
+    crearRespuesta()
 
   } catch (e) {
 
@@ -54,6 +68,18 @@ function validarFormulario(){
   }
 }
 
+/**
+  Funcion que crea respuesta si el usuario selecciona "IA Windows" de la categoria "Automatico"
+  @param {string} e Parametro que captura el texto de error
+*/
+function crearRespuesta(){
+  try {
+    var tipoPilotaje = document.getElementById("s2").value
+    if(tipoPilotaje == "IA Windows") throw "Te la vas a pegar"
+  } catch (e) {
+    mostrarError(e)
+  }
+}
 
 /**
   Funcion que sirve para rellenar el tipo de pilotaje segun sea Automatico o Personal
@@ -105,7 +131,7 @@ function mostrarError(texto){
 function borrarElementosOptions(){
   var tipoPilotaje = document.getElementById("s2");
   var finTipoPilotaje = tipoPilotaje.options.length;
-  for (i = finTipoPilotaje - 1; i >= 0; i--) {
+  for (let i = finTipoPilotaje - 1; i >= 0; i--) {
     tipoPilotaje.options[i] = null;
   }
 }

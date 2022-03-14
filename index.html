@@ -19,21 +19,20 @@
 		<label>Motores: <input type=text id=iNumMotores /></label>
 		<br />
 		<label for=sPilotaje>Pilotaje: </label>
-			<select id=sPilotaje onchange="rellenarTipoPilotaje()">
+			<select id=sPilotaje>
 				<option value="auto" selected>Automático</option>
 				<option value="perso">Personal</option>
 			</select>
 			<select id=s2></select>
 			<br/>
-			<input type="button" id="iBoton" value="Comprobar" onclick="validarFormulario()" />
+			<input type="button" id="iBoton" value="Comprobar"/>
 		<!--button>Comprobar</button-->
 	</form>
 	<hr />
 	<div id=divError>
 		<p id="pError"></p>
 	</div>
-	<script src="js/nave.js"></script>
-	<script src=js/ex_js.js></script>
+	<script type="module" src=js/ex_js.js></script>
 </body>
 
 </html>
