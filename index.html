@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=es>
+
+<head>
+	<meta charset=utf-8 />
+	<meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta name=author content='mjaque@migueljaque.com' />
+	<title>Naves Espaciales</title>
+
+	<link rel=stylesheet href=css/reset.css />
+	<link rel=stylesheet href=css/ex_js.css />
+</head>
+
+<body>
+	<h1>Naves Espaciales</h1>
+	<form>
+		<label>Código: <input type=text id=iCodigo /></label>
+		<br />
+		<label>Motores: <input type=text id=iNumMotores /></label>
+		<br />
+		<label for=sPilotaje>Pilotaje: </label>
+			<select id=sPilotaje onchange="rellenarTipoPilotaje()">
+				<option value="auto" selected>Automático</option>
+				<option value="perso">Personal</option>
+			</select>
+			<select id=s2></select>
+			<br/>
+			<input type="button" id="iBoton" value="Comprobar" onclick="validarFormulario()" />
+		<!--button>Comprobar</button-->
+	</form>
+	<hr />
+	<div id=divError>
+		<p id="pError"></p>
+	</div>
+	<script src="js/nave.js"></script>
+	<script src=js/ex_js.js></script>
+</body>
+
+</html>

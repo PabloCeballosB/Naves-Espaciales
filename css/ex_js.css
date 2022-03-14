@@ -1,0 +1,53 @@
+/* Reglas de css */
+
+body {
+  padding: 1em;
+  font-family: arial;
+}
+
+h1, h2{
+  color: blue;
+}
+
+h1{
+  font-size: 140%;
+  padding-bottom: 0.5em;
+}
+
+h2{
+  font-size: 120%;
+  font-style: italic;
+  padding-bottom: 0.2em;
+}
+
+br{
+  margin: 1em;
+}
+
+label{
+  font-weight: bold;
+}
+
+input{
+  margin-right: 3em;
+}
+
+tr{
+  background-color: lightgrey;
+}
+
+tr:nth-child(2n+1){
+  background-color: lightblue;
+}
+
+#divError{
+  width: 60%;
+  margin: 1em auto;
+  background-color: red;
+  color: white;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 0.3em;
+  display: none;
+}
